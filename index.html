@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechFlow | Gerenciamento de OS</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+
+    <button class="mobile-menu" id="menuBtn">☰</button>
+
+    <aside class="sidebar" id="sidebar">
+        <div class="logo">
+            <div class="logo-icon">TF</div>
+            <span>Tech<span>Flow</span></span>
+        </div>
+
+        <nav>
+            <a href="#dashboard" class="active">▦ <span>Dashboard</span></a>
+            <a href="#ordens">▤ <span>Ordens de Serviço</span></a>
+            <a href="#tecnicos">♙ <span>Técnicos</span></a>
+            <a href="#clientes">♧ <span>Clientes</span></a>
+            <a href="#equipamentos">▣ <span>Equipamentos</span></a>
+            <a href="#configuracoes">⚙ <span>Configurações</span></a>
+        </nav>
+
+        <button class="logout">↪ <span>Sair</span></button>
+    </aside>
+
+    <main class="main">
+
+        <header class="topbar">
+            <div>
+                <p class="welcome">Olá, administrador 👋</p>
+                <h1>Dashboard</h1>
+            </div>
+
+            <div class="profile">
+                <div class="avatar">EP</div>
+                <div>
+                    <strong>Enzo Predasoli</strong>
+                    <small>Administrador</small>
+                </div>
+            </div>
+        </header>
+
+        <!-- DASHBOARD -->
+        <section id="dashboard" class="section">
+
+            <div class="section-title">
+                <div>
+                    <p class="label">VISÃO GERAL</p>
+                    <h2>Resumo do sistema</h2>
+                </div>
+                <span class="date">16 Setembro, 2026</span>
+            </div>
+
+            <div class="stats">
+
+                <div class="stat-card">
+                    <div class="stat-icon blue">▤</div>
+                    <div>
+                        <span>Total de OS</span>
+                        <strong>128</strong>
+                        <small>+12% este mês</small>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon orange">◷</div>
+                    <div>
+                        <span>OS Abertas</span>
+                        <strong>24</strong>
+                        <small>Precisam de atenção</small>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon purple">⚙</div>
+                    <div>
+                        <span>Em andamento</span>
+                        <strong>18</strong>
+                        <small>Serviços ativos</small>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon green">✓</div>
+                    <div>
+                        <span>Concluídas</span>
+                        <strong>86</strong>
+                        <small>+8% este mês</small>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="content-card recent">
+                <div class="card-header">
+                    <div>
+                        <h3>Ordens recentes</h3>
+                        <p>Acompanhe os últimos serviços registrados.</p>
+                    </div>
+                    <a href="#ordens" class="view-all">Ver todas →</a>
+                </div>
+
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>OS</th>
+                                <th>Cliente</th>
+                                <th>Equipamento</th>
+                                <th>Técnico</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td><strong>#001</strong></td>
+                                <td>Lucas Ferreira</td>
+                                <td>Notebook Dell</td>
+                                <td>Marcos Silva</td>
+                                <td><span class="badge progress">Em andamento</span></td>
+                            </tr>
+
+                            <tr>
+                                <td><strong>#002</strong></td>
+                                <td>Juliana Santos</td>
+                                <td>Impressora HP</td>
+                                <td>Rafael Costa</td>
+                                <td><span class="badge open">Aberta</span></td>
+                            </tr>
+
+                            <tr>
+                                <td><strong>#003</strong></td>
+                                <td>Pedro Oliveira</td>
+                                <td>Computador</td>
+                                <td>Marcos Silva</td>
+                                <td><span class="badge completed">Concluída</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- ORDENS -->
+        <section id="ordens" class="section">
+
+            <div class="section-title">
+                <div>
+                    <p class="label">GERENCIAMENTO</p>
+                    <h2>Ordens de Serviço</h2>
+                </div>
+
+                <button class="primary-btn" id="newOrderBtn">+ Nova Ordem</button>
+            </div>
+
+            <div class="content-card">
+                <div class="card-header">
+                    <div>
+                        <h3>Lista de serviços</h3>
+                        <p>Gerencie todas as ordens de serviço.</p>
+                    </div>
+
+                    <input class="search" type="text" placeholder="Buscar OS...">
+                </div>
+
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Nº OS</th>
+                                <th>Cliente</th>
+                                <th>Equipamento</th>
+                                <th>Técnico</th>
+                                <th>Status</th>
+                                <th>Data</th>
+                                <th>Ação</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td><strong>#001</strong></td>
+                                <td>Lucas Ferreira</td>
+                                <td>Notebook Dell</td>
+                                <td>Marcos Silva</td>
+                                <td><span class="badge progress">Em andamento</span></td>
+                                <td>15/09/26</td>
+                                <td><button class="details-btn">Ver detalhes</button></td>
+                            </tr>
+
+                            <tr>
+                                <td><strong>#002</strong></td>
+                                <td>Juliana Santos</td>
+                                <td>Impressora HP</td>
+                                <td>Rafael Costa</td>
+                                <td><span class="badge open">Aberta</span></td>
+                                <td>14/09/26</td>
+                                <td><button class="details-btn">Ver detalhes</button></td>
+                            </tr>
+
+                            <tr>
+                                <td><strong>#003</strong></td>
+                                <td>Pedro Oliveira</td>
+                                <td>Computador</td>
+                                <td>Marcos Silva</td>
+                                <td><span class="badge completed">Concluída</span></td>
+                                <td>12/09/26</td>
+                                <td><button class="details-btn">Ver detalhes</button></td>
+                            </tr>
+
+                            <tr>
+                                <td><strong>#004</strong></td>
+                                <td>Carla Mendes</td>
+                                <td>Monitor Samsung</td>
+                                <td>Rafael Costa</td>
+                                <td><span class="badge progress">Em andamento</span></td>
+                                <td>11/09/26</td>
+                                <td><button class="details-btn">Ver detalhes</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- TÉCNICOS -->
+        <section id="tecnicos" class="section">
+
+            <div class="section-title">
+                <div>
+                    <p class="label">EQUIPE</p>
+                    <h2>Técnicos</h2>
+                </div>
+            </div>
+
+            <div class="people-grid">
+
+                <div class="person-card">
+                    <div class="person-avatar">MS</div>
+                    <h3>Marcos Silva</h3>
+                    <p>Especialista em computadores</p>
+                    <div class="person-info">
+                        <span>24 OS</span>
+                        <b>● Ativo</b>
+                    </div>
+                </div>
+
+                <div class="person-card">
+                    <div class="person-avatar">RC</div>
+                    <h3>Rafael Costa</h3>
+                    <p>Especialista em impressoras</p>
+                    <div class="person-info">
+                        <span>18 OS</span>
+                        <b>● Ativo</b>
+                    </div>
+                </div>
+
+                <div class="person-card">
+                    <div class="person-avatar">AS</div>
+                    <h3>Ana Souza</h3>
+                    <p>Especialista em notebooks</p>
+                    <div class="person-info">
+                        <span>21 OS</span>
+                        <b>● Ativo</b>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- CLIENTES -->
+        <section id="clientes" class="section">
+
+            <div class="section-title">
+                <div>
+                    <p class="label">CADASTRO</p>
+                    <h2>Clientes</h2>
+                </div>
+            </div>
+
+            <div class="content-card">
+                <div class="client-list">
+
+                    <div class="client">
+                        <div class="client-avatar">LF</div>
+                        <div>
+                            <strong>Lucas Ferreira</strong>
+                            <span>(11) 99999-1234</span>
+                        </div>
+                        <div class="client-equipment">Notebook Dell</div>
+                        <div class="client-orders">4 OS</div>
+                    </div>
+
+                    <div class="client">
+                        <div class="client-avatar">JS</div>
+                        <div>
+                            <strong>Juliana Santos</strong>
+                            <span>(11) 98888-5678</span>
+                        </div>
+                        <div class="client-equipment">Impressora HP</div>
+                        <div class="client-orders">2 OS</div>
+                    </div>
+
+                    <div class="client">
+                        <div class="client-avatar">PO</div>
+                        <div>
+                            <strong>Pedro Oliveira</strong>
+                            <span>(11) 97777-4321</span>
+                        </div>
+                        <div class="client-equipment">Computador</div>
+                        <div class="client-orders">7 OS</div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- EQUIPAMENTOS -->
+        <section id="equipamentos" class="section">
+
+            <div class="section-title">
+                <div>
+                    <p class="label">PATRIMÔNIO</p>
+                    <h2>Equipamentos</h2>
+                </div>
+            </div>
+
+            <div class="equipment-grid">
+
+                <div class="equipment-card">
+                    <div class="equipment-icon">▣</div>
+                    <span class="equipment-status">Em manutenção</span>
+                    <h3>Notebook Dell</h3>
+                    <p>Marca: Dell</p>
+                    <p>Modelo: Inspiron 15</p>
+                    <small>Cliente: Lucas Ferreira</small>
+                </div>
+
+                <div class="equipment-card">
+                    <div class="equipment-icon">▤</div>
+                    <span class="equipment-status">Aguardando</span>
+                    <h3>Impressora HP</h3>
+                    <p>Marca: HP</p>
+                    <p>Modelo: LaserJet Pro</p>
+                    <small>Cliente: Juliana Santos</small>
+                </div>
+
+                <div class="equipment-card">
+                    <div class="equipment-icon">▥</div>
+                    <span class="equipment-status done">Concluído</span>
+                    <h3>Computador</h3>
+                    <p>Marca: Lenovo</p>
+                    <p>Modelo: ThinkCentre</p>
+                    <small>Cliente: Pedro Oliveira</small>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- CONFIGURAÇÕES -->
+        <section id="configuracoes" class="section">
+
+            <div class="section-title">
+                <div>
+                    <p class="label">SISTEMA</p>
+                    <h2>Configurações</h2>
+                </div>
+            </div>
+
+            <div class="content-card settings">
+                <h3>Configurações do sistema</h3>
+                <p>Área preparada para futuras configurações da plataforma.</p>
+
+                <div class="setting">
+                    <span>Notificações de novas OS</span>
+                    <input type="checkbox" checked>
+                </div>
+
+                <div class="setting">
+                    <span>Atualizações automáticas</span>
+                    <input type="checkbox" checked>
+                </div>
+            </div>
+
+        </section>
+
+        <footer>
+            <strong>TechFlow</strong> · Sistema de gerenciamento de manutenção
+        </footer>
+
+    </main>
+
+    <!-- MODAL NOVA OS -->
+    <div class="modal" id="modal">
+        <div class="modal-box">
+
+            <button class="close" id="closeModal">×</button>
+
+            <div class="modal-title">
+                <div class="modal-icon">+</div>
+                <div>
+                    <h2>Nova Ordem de Serviço</h2>
+                    <p>Cadastre um novo serviço no sistema.</p>
+                </div>
+            </div>
+
+            <form id="orderForm">
+
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label>Cliente</label>
+                        <input type="text" placeholder="Nome do cliente" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Equipamento</label>
+                        <input type="text" placeholder="Ex: Notebook Dell" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Técnico</label>
+                        <select>
+                            <option>Marcos Silva</option>
+                            <option>Rafael Costa</option>
+                            <option>Ana Souza</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Status</label>
+                        <select>
+                            <option>Aberta</option>
+                            <option>Em andamento</option>
+                            <option>Concluída</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Problema relatado</label>
+                    <textarea placeholder="Descreva o problema do equipamento..."></textarea>
+                </div>
+
+                <button type="submit" class="primary-btn full">
+                    Criar Ordem de Serviço
+                </button>
+
+            </form>
+        </div>
+    </div>
+
+    <script src="./js/script.js"></script>
+</body>
+</html>
