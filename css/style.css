@@ -10,8 +10,7 @@ html {
 
 body {
     font-family: "Segoe UI", Arial, sans-serif;
-    background: #080b10;
-    color: #f5f7fa;
+    background: linear-gradient(to right, rgb(1, 1, 19), rgb(20, 29, 95));
 }
 
 a {
@@ -33,7 +32,7 @@ textarea {
     width: 250px;
     height: 100vh;
     padding: 28px 18px;
-    background: #0d1118;
+    background: #131924;
     border-right: 1px solid #1d2733;
     display: flex;
     flex-direction: column;
@@ -50,8 +49,13 @@ textarea {
     padding-left: 10px;
 }
 
-.logo span span {
-    color: #19bfff;
+.logo-tech {
+    color: #57a5ff 
+}
+
+.logo-flow  {
+    color: #ffffffec;
+    
 }
 
 .logo-icon {
@@ -60,8 +64,8 @@ textarea {
     display: grid;
     place-items: center;
     border-radius: 10px;
-    background: linear-gradient(135deg, #08aeea, #1769ff);
-    box-shadow: 0 0 22px #079fe833;
+    background: linear-gradient(135deg, #ffffff, #6388cc);
+    box-shadow: 0 0 22px #87d5d833;
     font-size: 13px;
 }
 
@@ -88,7 +92,7 @@ textarea {
 
 .sidebar nav a:hover,
 .sidebar nav a.active {
-    color: #fff;
+    color: #ece7e7;
     background: #162231;
 }
 
@@ -104,7 +108,7 @@ textarea {
 
 .logout:hover {
     color: #ff6969;
-    background: #211519;
+    background: #180f12;
 }
 
 .main {
@@ -170,6 +174,7 @@ textarea {
 }
 
 .section-title {
+    color: #d1f1ff;
     display: flex;
     justify-content: space-between;
     align-items: end;
