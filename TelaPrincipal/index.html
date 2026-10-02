@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TechFlow · Portal do Cliente</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700&family=Hanken+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Ícones -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <symbol id="i-home" viewBox="0 0 24 24"><path d="M3 11l9-8 9 8v10a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/></symbol>
+      <symbol id="i-list" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h10"/></symbol>
+      <symbol id="i-device" viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="11" rx="1.5"/><path d="M2 20h20"/></symbol>
+      <symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></symbol>
+      <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+      <symbol id="i-alert" viewBox="0 0 24 24"><path d="M12 3l10 18H2z"/><path d="M12 10v5M12 18v.01"/></symbol>
+      <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12l5 5 9-10"/></symbol>
+    </defs>
+  </svg>
+
+  <a class="pular" href="#conteudo">Ir para o conteúdo</a>
+
+  <!-- ===== Menu lateral (vira barra inferior no celular) ===== -->
+  <aside class="lateral">
+    <a class="marca" href="#inicio">Tech<span>Flow</span></a>
+
+    <nav class="menu" aria-label="Principal">
+      <a href="#inicio" data-nav="inicio"><svg class="ico" aria-hidden="true"><use href="#i-home"/></svg><span>Início</span></a>
+      <a href="#pedidos" data-nav="pedidos"><svg class="ico" aria-hidden="true"><use href="#i-list"/></svg><span>Meus pedidos</span></a>
+      <a href="#equipamentos" data-nav="equipamentos"><svg class="ico" aria-hidden="true"><use href="#i-device"/></svg><span>Meus equipamentos</span></a>
+      <a href="#perfil" data-nav="perfil"><svg class="ico" aria-hidden="true"><use href="#i-user"/></svg><span>Meu perfil</span></a>
+    </nav>
+
+    <a class="usuario" href="#perfil">
+      <span class="avatar" aria-hidden="true">LF</span>
+      <span><strong>Lucas Ferreira</strong><small>Cliente</small></span>
+    </a>
+  </aside>
+
+  <a class="fab" href="#solicitar" aria-label="Solicitar serviço"><svg class="ico" aria-hidden="true"><use href="#i-plus"/></svg></a>
+
+  <main id="conteudo">
+
+    <!-- =========================================================
+         INÍCIO
+    ========================================================== -->
+    <section class="view" id="inicio" aria-labelledby="t-inicio">
+      <header class="topo">
+        <div>
+          <h1 id="t-inicio">Olá, Lucas</h1>
+          <p class="sub">Você tem 1 pedido em andamento e 1 esperando sua resposta.</p>
+        </div>
+        <a class="btn primario" href="#solicitar"><svg class="ico" aria-hidden="true"><use href="#i-plus"/></svg>Solicitar serviço</a>
+      </header>
+
+      <a class="alerta" href="#pedido-002">
+        <svg class="ico" aria-hidden="true"><use href="#i-alert"/></svg>
+        <span class="alerta-texto">
+          <strong>Aprove o orçamento da Impressora HP</strong>
+          <small>Pedido #002 · R$ 180,00 · o reparo só começa depois da sua resposta</small>
+        </span>
+        <span class="alerta-acao">Ver orçamento</span>
+      </a>
+
+      <article class="destaque">
+        <div class="destaque-topo">
+          <div>
+            <p class="meta">Pedido #001 · aberto em 15/09/26</p>
+            <h2>Notebook Dell está em reparo</h2>
+          </div>
+          <span class="selo andamento">Em reparo</span>
+        </div>
+
+        <ol class="trilho" aria-label="Etapas do pedido #001">
+          <li class="feito"><span>Recebida</span><small>15/09</small></li>
+          <li class="feito"><span>Em análise</span><small>16/09</small></li>
+          <li class="atual" aria-current="step"><span>Em reparo</span><small>desde 17/09</small></li>
+          <li><span>Pronta</span><small>previsão 20/09</small></li>
+        </ol>
+
+        <div class="destaque-pe">
+          <p>Técnico responsável: <strong>Marcos Silva</strong></p>
+          <a class="btn secundario" href="#pedido-001">Acompanhar</a>
+        </div>
+      </article>
+
+      <div class="resumo" role="list">
+        <div class="resumo-item" role="listitem"><strong>1</strong><span>em andamento</span></div>
+        <div class="resumo-item atencao" role="listitem"><strong>1</strong><span>aguardando você</span></div>
+        <div class="resumo-item" role="listitem"><strong>4</strong><span>concluídos</span></div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         MEUS PEDIDOS
+    ========================================================== -->
+    <section class="view" id="pedidos" aria-labelledby="t-pedidos">
+      <header class="topo">
+        <div>
+          <h1 id="t-pedidos">Meus pedidos</h1>
+          <p class="sub">Todos os serviços que você já pediu.</p>
+        </div>
+        <a class="btn primario" href="#solicitar"><svg class="ico" aria-hidden="true"><use href="#i-plus"/></svg>Solicitar serviço</a>
+      </header>
+
+      <div class="ferramentas">
+        <label class="busca">
+          <span class="so-leitor">Buscar pedido</span>
+          <input type="search" placeholder="Buscar por número ou equipamento">
+        </label>
+        <ul class="filtros" aria-label="Filtrar por status">
+          <li><a class="ativo" href="#pedidos">Todos</a></li>
+          <li><a href="#pedidos">Em andamento</a></li>
+          <li><a href="#pedidos">Aguardando você</a></li>
+          <li><a href="#pedidos">Concluídos</a></li>
+        </ul>
+      </div>
+
+      <ul class="lista-pedidos">
+        <li class="pedido precisa">
+          <div class="pedido-id"><strong>#002</strong><span>Impressora HP</span></div>
+          <span class="selo aguardando">Aguardando você</span>
+          <span class="pedido-data">14/09/26</span>
+          <a class="btn secundario" href="#pedido-002">Acompanhar</a>
+        </li>
+        <li class="pedido">
+          <div class="pedido-id"><strong>#001</strong><span>Notebook Dell</span></div>
+          <span class="selo andamento">Em reparo</span>
+          <span class="pedido-data">15/09/26</span>
+          <a class="btn secundario" href="#pedido-001">Acompanhar</a>
+        </li>
+        <li class="pedido">
+          <div class="pedido-id"><strong>#094</strong><span>Monitor Samsung</span></div>
+          <span class="selo concluida">Concluído</span>
+          <span class="pedido-data">02/08/26</span>
+          <a class="btn secundario" href="#pedidos">Ver histórico</a>
+        </li>
+        <li class="pedido">
+          <div class="pedido-id"><strong>#071</strong><span>Computador</span></div>
+          <span class="selo concluida">Concluído</span>
+          <span class="pedido-data">19/06/26</span>
+          <a class="btn secundario" href="#pedidos">Ver histórico</a>
+        </li>
+      </ul>
+    </section>
+
+    <!-- =========================================================
+         DETALHE DO PEDIDO #001
+    ========================================================== -->
+    <section class="view" id="pedido-001" aria-labelledby="t-p001">
+      <a class="voltar" href="#pedidos">Voltar para meus pedidos</a>
+
+      <header class="topo">
+        <div>
+          <p class="meta">Pedido #001 · aberto em 15/09/26</p>
+          <h1 id="t-p001">Notebook Dell</h1>
+        </div>
+        <span class="selo andamento grande">Em reparo</span>
+      </header>
+
+      <ol class="trilho" aria-label="Etapas do pedido #001">
+        <li class="feito"><span>Recebida</span><small>15/09</small></li>
+        <li class="feito"><span>Em análise</span><small>16/09</small></li>
+        <li class="atual" aria-current="step"><span>Em reparo</span><small>desde 17/09</small></li>
+        <li><span>Pronta</span><small>previsão 20/09</small></li>
+      </ol>
+
+      <div class="detalhe-grade">
+        <div class="coluna">
+          <section class="bloco">
+            <h2>O que já aconteceu</h2>
+            <ol class="historico">
+              <li class="atual"><time>17/09 · 09:40</time><p>Reparo iniciado. A placa de vídeo está sendo substituída.</p></li>
+              <li><time>16/09 · 14:15</time><p>Diagnóstico concluído e orçamento aprovado por você.</p></li>
+              <li><time>15/09 · 10:02</time><p>Equipamento recebido na loja.</p></li>
+              <li><time>15/09 · 09:30</time><p>Pedido aberto por você.</p></li>
+            </ol>
+          </section>
+
+          <section class="bloco">
+            <h2>Mensagens</h2>
+            <div class="conversa">
+              <p class="msg equipe"><span>Marcos Silva</span>Encontramos o defeito na placa de vídeo. Seguimos com a troca.</p>
+              <p class="msg voce"><span>Você</span>Ótimo, obrigado! Consigo retirar na sexta?</p>
+              <p class="msg equipe"><span>Marcos Silva</span>Deve ficar pronto na sexta. Avisamos por WhatsApp.</p>
+            </div>
+            <form class="escrever" action="#pedido-001">
+              <label class="so-leitor" for="msg-001">Escreva uma mensagem</label>
+              <input id="msg-001" type="text" placeholder="Escreva uma mensagem para a equipe">
+              <button class="btn primario" type="submit">Enviar mensagem</button>
+            </form>
+          </section>
+        </div>
+
+        <aside class="coluna lado">
+          <section class="bloco">
+            <h2>Sobre o serviço</h2>
+            <dl class="dados">
+              <div><dt>Problema informado</dt><dd>Tela apaga sozinha e o ventilador fica muito barulhento.</dd></div>
+              <div><dt>Técnico</dt><dd>Marcos Silva</dd></div>
+              <div><dt>Entrega</dt><dd>Retirada na loja</dd></div>
+              <div><dt>Valor aprovado</dt><dd>R$ 420,00</dd></div>
+            </dl>
+          </section>
+
+          <section class="bloco">
+            <h2>Ações</h2>
+            <div class="acoes">
+              <a class="btn secundario" href="#pedido-001">Baixar comprovante</a>
+              <a class="btn secundario" href="#solicitar">Abrir pedido parecido</a>
+              <p class="nota">O cancelamento só está disponível antes do início do reparo.</p>
+            </div>
+          </section>
+        </aside>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         DETALHE DO PEDIDO #002 (orçamento pendente)
+    ========================================================== -->
+    <section class="view" id="pedido-002" aria-labelledby="t-p002">
+      <a class="voltar" href="#pedidos">Voltar para meus pedidos</a>
+
+      <header class="topo">
+        <div>
+          <p class="meta">Pedido #002 · aberto em 14/09/26</p>
+          <h1 id="t-p002">Impressora HP</h1>
+        </div>
+        <span class="selo aguardando grande">Aguardando você</span>
+      </header>
+
+      <ol class="trilho" aria-label="Etapas do pedido #002">
+        <li class="feito"><span>Recebida</span><small>14/09</small></li>
+        <li class="atual" aria-current="step"><span>Em análise</span><small>orçamento pronto</small></li>
+        <li><span>Em reparo</span><small>depois da aprovação</small></li>
+        <li><span>Pronta</span><small>a definir</small></li>
+      </ol>
+
+      <div class="detalhe-grade">
+        <div class="coluna">
+
+          <!-- Decisão do orçamento, sem JavaScript -->
+          <section class="bloco orcamento">
+            <input class="oculto" type="radio" name="decisao" id="d-nada" checked>
+            <input class="oculto" type="radio" name="decisao" id="d-ok">
+            <input class="oculto" type="radio" name="decisao" id="d-nao">
+
+            <div class="orc-pendente">
+              <h2>Seu orçamento chegou</h2>
+              <table class="tabela-orc">
+                <caption class="so-leitor">Itens do orçamento</caption>
+                <tbody>
+                  <tr><th scope="row">Troca do rolo de tração</th><td>R$ 95,00</td></tr>
+                  <tr><th scope="row">Limpeza completa</th><td>R$ 45,00</td></tr>
+                  <tr><th scope="row">Mão de obra</th><td>R$ 40,00</td></tr>
+                </tbody>
+                <tfoot>
+                  <tr><th scope="row">Total</th><td>R$ 180,00</td></tr>
+                </tfoot>
+              </table>
+              <p class="nota">Prazo estimado depois da aprovação: 3 dias úteis.</p>
+              <div class="acoes linha">
+                <label class="btn primario" for="d-ok">Aprovar orçamento</label>
+                <label class="btn secundario" for="d-nao">Recusar</label>
+              </div>
+            </div>
+
+            <div class="orc-ok">
+              <svg class="ico grande-ico" aria-hidden="true"><use href="#i-check"/></svg>
+              <h2>Orçamento aprovado</h2>
+              <p>O reparo entra na fila e você recebe um aviso quando começar.</p>
+              <label class="btn secundario" for="d-nada">Desfazer</label>
+            </div>
+
+            <div class="orc-nao">
+              <h2>Orçamento recusado</h2>
+              <p>Vamos encerrar o pedido. Você pode buscar a impressora na loja sem custo.</p>
+              <label class="btn secundario" for="d-nada">Desfazer</label>
+            </div>
+          </section>
+
+          <section class="bloco">
+            <h2>O que já aconteceu</h2>
+            <ol class="historico">
+              <li class="atual"><time>16/09 · 16:20</time><p>Orçamento enviado. Esperamos sua resposta.</p></li>
+              <li><time>15/09 · 11:05</time><p>Diagnóstico concluído.</p></li>
+              <li><time>14/09 · 17:48</time><p>Equipamento recebido na loja.</p></li>
+              <li><time>14/09 · 17:10</time><p>Pedido aberto por você.</p></li>
+            </ol>
+          </section>
+        </div>
+
+        <aside class="coluna lado">
+          <section class="bloco">
+            <h2>Sobre o serviço</h2>
+            <dl class="dados">
+              <div><dt>Problema informado</dt><dd>Papel trava na entrada e sai com manchas.</dd></div>
+              <div><dt>Técnico</dt><dd>Rafael Costa</dd></div>
+              <div><dt>Entrega</dt><dd>Retirada na loja</dd></div>
+            </dl>
+          </section>
+          <section class="bloco">
+            <h2>Ações</h2>
+            <div class="acoes">
+              <a class="btn secundario" href="#pedido-002">Editar informações</a>
+              <a class="btn perigo" href="#pedidos">Cancelar pedido</a>
+            </div>
+          </section>
+        </aside>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         SOLICITAR SERVIÇO (formulário em 4 etapas, só com CSS)
+    ========================================================== -->
+    <section class="view" id="solicitar" aria-labelledby="t-solicitar">
+      <a class="voltar" href="#inicio">Cancelar e voltar ao início</a>
+
+      <header class="topo">
+        <div>
+          <h1 id="t-solicitar">Solicitar serviço</h1>
+          <p class="sub">Leva cerca de 2 minutos. Seu rascunho fica guardado.</p>
+        </div>
+      </header>
+
+      <form class="assistente" action="#confirmacao" method="get">
+        <input class="oculto" type="radio" name="etapa" id="e1" checked>
+        <input class="oculto" type="radio" name="etapa" id="e2">
+        <input class="oculto" type="radio" name="etapa" id="e3">
+        <input class="oculto" type="radio" name="etapa" id="e4">
+
+        <ol class="progresso" aria-label="Etapas da solicitação">
+          <li><label for="e1"><b>1</b>Equipamento</label></li>
+          <li><label for="e2"><b>2</b>Problema</label></li>
+          <li><label for="e3"><b>3</b>Entrega</label></li>
+          <li><label for="e4"><b>4</b>Revisão</label></li>
+        </ol>
+
+        <div class="paineis">
+
+          <!-- Etapa 1 -->
+          <fieldset class="painel p1">
+            <legend>Qual equipamento precisa de ajuda?</legend>
+            <div class="cartoes">
+              <input class="oculto" type="radio" name="equip" id="q-nb" value="notebook-dell" checked>
+              <label for="q-nb"><svg class="ico" aria-hidden="true"><use href="#i-device"/></svg><strong>Notebook Dell</strong><small>2 serviços anteriores</small></label>
+
+              <input class="oculto" type="radio" name="equip" id="q-imp" value="impressora-hp">
+              <label for="q-imp"><svg class="ico" aria-hidden="true"><use href="#i-device"/></svg><strong>Impressora HP</strong><small>1 serviço anterior</small></label>
+
+              <input class="oculto" type="radio" name="equip" id="q-pc" value="computador">
+              <label for="q-pc"><svg class="ico" aria-hidden="true"><use href="#i-device"/></svg><strong>Computador</strong><small>1 serviço anterior</small></label>
+
+              <input class="oculto" type="radio" name="equip" id="q-novo" value="novo">
+              <label for="q-novo"><svg class="ico" aria-hidden="true"><use href="#i-plus"/></svg><strong>Outro equipamento</strong><small>Cadastrar agora</small></label>
+
+              <div class="novo-eq">
+                <label>Tipo
+                  <select name="tipo">
+                    <option>Notebook</option><option>Computador</option><option>Impressora</option><option>Monitor</option><option>Outro</option>
+                  </select>
+                </label>
+                <label>Marca e modelo
+                  <input type="text" name="modelo" placeholder="Ex.: Lenovo IdeaPad 3">
+                </label>
+                <label>Número de série (opcional)
+                  <input type="text" name="serie">
+                </label>
+              </div>
+            </div>
+            <div class="rodape-etapa">
+              <span></span>
+              <label class="btn primario" for="e2">Continuar</label>
+            </div>
+          </fieldset>
+
+          <!-- Etapa 2 -->
+          <fieldset class="painel p2">
+            <legend>Conte o que está acontecendo</legend>
+
+            <div class="grupo">
+              <p class="rotulo">Tipo de serviço</p>
+              <div class="segmentos">
+                <input class="oculto" type="radio" name="servico" id="s-con" value="conserto" checked><label for="s-con">Conserto</label>
+                <input class="oculto" type="radio" name="servico" id="s-man" value="manutencao"><label for="s-man">Manutenção</label>
+                <input class="oculto" type="radio" name="servico" id="s-ins" value="instalacao"><label for="s-ins">Instalação</label>
+                <input class="oculto" type="radio" name="servico" id="s-orc" value="orcamento"><label for="s-orc">Só orçamento</label>
+              </div>
+            </div>
+
+            <div class="grupo">
+              <p class="rotulo">O que se parece com o seu caso?</p>
+              <div class="chips">
+                <input class="oculto" type="checkbox" name="sintoma" id="c1" value="nao-liga"><label for="c1">Não liga</label>
+                <input class="oculto" type="checkbox" name="sintoma" id="c2" value="lento"><label for="c2">Está lento</label>
+                <input class="oculto" type="checkbox" name="sintoma" id="c3" value="tela"><label for="c3">Problema na tela</label>
+                <input class="oculto" type="checkbox" name="sintoma" id="c4" value="barulho"><label for="c4">Faz barulho</label>
+                <input class="oculto" type="checkbox" name="sintoma" id="c5" value="esquenta"><label for="c5">Esquenta demais</label>
+                <input class="oculto" type="checkbox" name="sintoma" id="c6" value="outro"><label for="c6">Outro</label>
+              </div>
+            </div>
+
+            <div class="grupo">
+              <label class="rotulo" for="descricao">Descreva o problema</label>
+              <textarea id="descricao" name="descricao" rows="4" placeholder="Quando começou? Aparece alguma mensagem de erro?">Tela apaga sozinha e o ventilador fica muito barulhento.</textarea>
+              <p class="nota">Quanto mais detalhes, mais rápido o diagnóstico.</p>
+            </div>
+
+            <div class="grupo">
+              <label class="rotulo" for="fotos">Fotos ou vídeos (opcional)</label>
+              <input id="fotos" type="file" name="fotos" accept="image/*,video/*" multiple>
+            </div>
+
+            <div class="rodape-etapa">
+              <label class="btn secundario" for="e1">Voltar</label>
+              <label class="btn primario" for="e3">Continuar</label>
+            </div>
+          </fieldset>
+
+          <!-- Etapa 3 -->
+          <fieldset class="painel p3">
+            <legend>Como prefere entregar e ser avisado?</legend>
+
+            <div class="grupo">
+              <p class="rotulo">Urgência</p>
+              <div class="segmentos">
+                <input class="oculto" type="radio" name="urgencia" id="u-n" value="normal" checked><label for="u-n">Normal</label>
+                <input class="oculto" type="radio" name="urgencia" id="u-u" value="urgente"><label for="u-u">Urgente</label>
+              </div>
+            </div>
+
+            <div class="grupo">
+              <p class="rotulo">Entrega do equipamento</p>
+              <div class="segmentos">
+                <input class="oculto" type="radio" name="entrega" id="en-l" value="loja" checked><label for="en-l">Levo até a loja</label>
+                <input class="oculto" type="radio" name="entrega" id="en-b" value="buscar"><label for="en-b">Vocês buscam</label>
+                <input class="oculto" type="radio" name="entrega" id="en-s" value="local"><label for="en-s">Atendimento no local</label>
+              </div>
+            </div>
+
+            <div class="grupo">
+              <p class="rotulo">Como avisamos você?</p>
+              <div class="segmentos">
+                <input class="oculto" type="radio" name="contato" id="co-w" value="whatsapp" checked><label for="co-w">WhatsApp</label>
+                <input class="oculto" type="radio" name="contato" id="co-e" value="email"><label for="co-e">E-mail</label>
+                <input class="oculto" type="radio" name="contato" id="co-t" value="telefone"><label for="co-t">Telefone</label>
+              </div>
+            </div>
+
+            <div class="rodape-etapa">
+              <label class="btn secundario" for="e2">Voltar</label>
+              <label class="btn primario" for="e4">Continuar</label>
+            </div>
+          </fieldset>
+
+          <!-- Etapa 4 -->
+          <fieldset class="painel p4">
+            <legend>Confira antes de enviar</legend>
+
+            <dl class="revisao">
+              <div><dt>Equipamento</dt><dd>Notebook Dell</dd><label class="editar" for="e1">Editar</label></div>
+              <div><dt>Serviço</dt><dd>Conserto · tela apaga sozinha e o ventilador fica muito barulhento</dd><label class="editar" for="e2">Editar</label></div>
+              <div><dt>Entrega</dt><dd>Levo até a loja · urgência normal</dd><label class="editar" for="e3">Editar</label></div>
+              <div><dt>Contato</dt><dd>WhatsApp</dd><label class="editar" for="e3">Editar</label></div>
+            </dl>
+
+            <label class="aceite"><input type="checkbox" name="aceite" checked> Concordo com os termos de atendimento e o prazo de guarda do equipamento.</label>
+
+            <div class="rodape-etapa">
+              <label class="btn secundario" for="e3">Voltar</label>
+              <button class="btn primario" type="submit">Enviar solicitação</button>
+            </div>
+          </fieldset>
+
+        </div>
+      </form>
+    </section>
+
+    <!-- =========================================================
+         CONFIRMAÇÃO
+    ========================================================== -->
+    <section class="view" id="confirmacao" aria-labelledby="t-conf">
+      <div class="confirmacao">
+        <span class="check-grande"><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg></span>
+        <h1 id="t-conf">Pedido #003 recebido</h1>
+        <p>Nossa equipe responde em até 1 dia útil. Você será avisado por WhatsApp a cada mudança.</p>
+        <ol class="proximos">
+          <li>Levar o equipamento até a loja</li>
+          <li>Esperar o diagnóstico</li>
+          <li>Aprovar o orçamento, se houver</li>
+        </ol>
+        <div class="acoes linha centro">
+          <a class="btn primario" href="#pedido-001">Acompanhar pedido</a>
+          <a class="btn secundario" href="#inicio">Voltar ao início</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         MEUS EQUIPAMENTOS
+    ========================================================== -->
+    <section class="view" id="equipamentos" aria-labelledby="t-eq">
+      <header class="topo">
+        <div>
+          <h1 id="t-eq">Meus equipamentos</h1>
+          <p class="sub">Cadastre uma vez e peça serviços com um clique.</p>
+        </div>
+        <a class="btn primario" href="#solicitar"><svg class="ico" aria-hidden="true"><use href="#i-plus"/></svg>Adicionar equipamento</a>
+      </header>
+
+      <ul class="grade-eq">
+        <li class="eq">
+          <svg class="ico" aria-hidden="true"><use href="#i-device"/></svg>
+          <h2>Notebook Dell</h2>
+          <p>2 serviços realizados</p>
+          <p class="nota">Em reparo agora</p>
+          <div class="acoes linha"><a class="btn secundario" href="#pedido-001">Ver histórico</a><a class="btn secundario" href="#equipamentos">Editar</a></div>
+        </li>
+        <li class="eq">
+          <svg class="ico" aria-hidden="true"><use href="#i-device"/></svg>
+          <h2>Impressora HP</h2>
+          <p>1 serviço realizado</p>
+          <p class="nota">Orçamento esperando você</p>
+          <div class="acoes linha"><a class="btn secundario" href="#pedido-002">Ver histórico</a><a class="btn secundario" href="#equipamentos">Editar</a></div>
+        </li>
+        <li class="eq">
+          <svg class="ico" aria-hidden="true"><use href="#i-device"/></svg>
+          <h2>Computador</h2>
+          <p>1 serviço realizado</p>
+          <p class="nota">Sem pedidos abertos</p>
+          <div class="acoes linha"><a class="btn secundario" href="#solicitar">Pedir serviço</a><a class="btn secundario" href="#equipamentos">Editar</a></div>
+        </li>
+      </ul>
+    </section>
+
+    <!-- =========================================================
+         MEU PERFIL
+    ========================================================== -->
+    <section class="view" id="perfil" aria-labelledby="t-perfil">
+      <header class="topo">
+        <div>
+          <h1 id="t-perfil">Meu perfil</h1>
+          <p class="sub">Mantenha seus dados em dia para receber os avisos certos.</p>
+        </div>
+      </header>
+
+      <form class="perfil-form" action="#perfil">
+        <section class="bloco">
+          <h2>Dados de contato</h2>
+          <div class="campos">
+            <label>Nome completo<input type="text" value="Lucas Ferreira"></label>
+            <label>E-mail<input type="email" value="lucas.ferreira@email.com"></label>
+            <label>Celular<input type="tel" value="(11) 90000-0000"></label>
+            <label>Endereço<input type="text" placeholder="Rua, número e bairro"></label>
+          </div>
+        </section>
+
+        <section class="bloco">
+          <h2>Como quer receber avisos</h2>
+          <label class="interruptor"><input type="checkbox" checked><span>WhatsApp</span></label>
+          <label class="interruptor"><input type="checkbox" checked><span>E-mail</span></label>
+          <label class="interruptor"><input type="checkbox"><span>Mensagem de texto</span></label>
+        </section>
+
+        <section class="bloco">
+          <h2>Senha</h2>
+          <div class="campos">
+            <label>Senha atual<input type="password" autocomplete="current-password"></label>
+            <label>Nova senha<input type="password" autocomplete="new-password"></label>
+          </div>
+        </section>
+
+        <div class="acoes linha">
+          <button class="btn primario" type="submit">Salvar alterações</button>
+          <a class="btn perigo" href="#inicio">Sair da conta</a>
+        </div>
+      </form>
+    </section>
+
+  </main>
+</body>
+</html>
