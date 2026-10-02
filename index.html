@@ -11,12 +11,9 @@
     <button class="mobile-menu" id="menuBtn">☰</button>
 
     <aside class="sidebar" id="sidebar">
-      <div class="logo">
-    <img src="./img/LOGO.png" alt="Logo TechFlow" class="logo-icon">
-    <span class="logo-tech">Tech</span><span class="logo-flow">Flow</span>
-</div>
-
-
+        <div class="logo">
+            <span class="logo-tech">Tech</span><span class="logo-flow">Flow</span>
+        </div>
 
         <nav>
             <a href="#dashboard" class="active">▦ <span>Dashboard</span></a>
@@ -34,8 +31,8 @@
 
         <header class="topbar">
             <div>
-                <p class="welcome">Olá, administrador 👋</p>
-                <h1>Dashboard</h1>
+                <p class="welcome">Olá, administrador</p>
+                <h1>Painel de Controle</h1>
             </div>
 
             <div class="profile">
@@ -59,7 +56,6 @@
             </div>
 
             <div class="stats">
-
                 <div class="stat-card">
                     <div class="stat-icon blue">▤</div>
                     <div>
@@ -74,7 +70,7 @@
                     <div>
                         <span>OS Abertas</span>
                         <strong>24</strong>
-                        <small>Precisam de atenção</small>
+                        <small class="warn">Precisam de atenção</small>
                     </div>
                 </div>
 
@@ -95,10 +91,9 @@
                         <small>+8% este mês</small>
                     </div>
                 </div>
-
             </div>
 
-            <div class="content-card recent">
+            <div class="content-card">
                 <div class="card-header">
                     <div>
                         <h3>Ordens recentes</h3>
@@ -118,7 +113,6 @@
                                 <th>Status</th>
                             </tr>
                         </thead>
-
                         <tbody>
                             <tr>
                                 <td><strong>#001</strong></td>
@@ -127,7 +121,6 @@
                                 <td>Marcos Silva</td>
                                 <td><span class="badge progress">Em andamento</span></td>
                             </tr>
-
                             <tr>
                                 <td><strong>#002</strong></td>
                                 <td>Juliana Santos</td>
@@ -135,7 +128,6 @@
                                 <td>Rafael Costa</td>
                                 <td><span class="badge open">Aberta</span></td>
                             </tr>
-
                             <tr>
                                 <td><strong>#003</strong></td>
                                 <td>Pedro Oliveira</td>
@@ -158,7 +150,6 @@
                     <p class="label">GERENCIAMENTO</p>
                     <h2>Ordens de Serviço</h2>
                 </div>
-
                 <button class="primary-btn" id="newOrderBtn">+ Nova Ordem</button>
             </div>
 
@@ -168,12 +159,11 @@
                         <h3>Lista de serviços</h3>
                         <p>Gerencie todas as ordens de serviço.</p>
                     </div>
-
-                    <input class="search" type="text" placeholder="Buscar OS...">
+                    <input class="search" id="searchOS" type="text" placeholder="Buscar OS...">
                 </div>
 
                 <div class="table-container">
-                    <table>
+                    <table id="osTable">
                         <thead>
                             <tr>
                                 <th>Nº OS</th>
@@ -185,7 +175,6 @@
                                 <th>Ação</th>
                             </tr>
                         </thead>
-
                         <tbody>
                             <tr>
                                 <td><strong>#001</strong></td>
@@ -194,9 +183,8 @@
                                 <td>Marcos Silva</td>
                                 <td><span class="badge progress">Em andamento</span></td>
                                 <td>15/09/26</td>
-                                <td><button class="details-btn">Ver detalhes</button></td>
+                                <td><button class="details-btn">Detalhes</button></td>
                             </tr>
-
                             <tr>
                                 <td><strong>#002</strong></td>
                                 <td>Juliana Santos</td>
@@ -204,9 +192,8 @@
                                 <td>Rafael Costa</td>
                                 <td><span class="badge open">Aberta</span></td>
                                 <td>14/09/26</td>
-                                <td><button class="details-btn">Ver detalhes</button></td>
+                                <td><button class="details-btn">Detalhes</button></td>
                             </tr>
-
                             <tr>
                                 <td><strong>#003</strong></td>
                                 <td>Pedro Oliveira</td>
@@ -214,9 +201,8 @@
                                 <td>Marcos Silva</td>
                                 <td><span class="badge completed">Concluída</span></td>
                                 <td>12/09/26</td>
-                                <td><button class="details-btn">Ver detalhes</button></td>
+                                <td><button class="details-btn">Detalhes</button></td>
                             </tr>
-
                             <tr>
                                 <td><strong>#004</strong></td>
                                 <td>Carla Mendes</td>
@@ -224,7 +210,7 @@
                                 <td>Rafael Costa</td>
                                 <td><span class="badge progress">Em andamento</span></td>
                                 <td>11/09/26</td>
-                                <td><button class="details-btn">Ver detalhes</button></td>
+                                <td><button class="details-btn">Detalhes</button></td>
                             </tr>
                         </tbody>
                     </table>
@@ -235,7 +221,6 @@
 
         <!-- TÉCNICOS -->
         <section id="tecnicos" class="section">
-
             <div class="section-title">
                 <div>
                     <p class="label">EQUIPE</p>
@@ -244,14 +229,13 @@
             </div>
 
             <div class="people-grid">
-
                 <div class="person-card">
                     <div class="person-avatar">MS</div>
                     <h3>Marcos Silva</h3>
                     <p>Especialista em computadores</p>
                     <div class="person-info">
                         <span>24 OS</span>
-                        <b>● Ativo</b>
+                        <b>Ativo</b>
                     </div>
                 </div>
 
@@ -261,7 +245,7 @@
                     <p>Especialista em impressoras</p>
                     <div class="person-info">
                         <span>18 OS</span>
-                        <b>● Ativo</b>
+                        <b>Ativo</b>
                     </div>
                 </div>
 
@@ -271,16 +255,14 @@
                     <p>Especialista em notebooks</p>
                     <div class="person-info">
                         <span>21 OS</span>
-                        <b>● Ativo</b>
+                        <b>Ativo</b>
                     </div>
                 </div>
-
             </div>
         </section>
 
         <!-- CLIENTES -->
         <section id="clientes" class="section">
-
             <div class="section-title">
                 <div>
                     <p class="label">CADASTRO</p>
@@ -290,7 +272,6 @@
 
             <div class="content-card">
                 <div class="client-list">
-
                     <div class="client">
                         <div class="client-avatar">LF</div>
                         <div>
@@ -320,14 +301,12 @@
                         <div class="client-equipment">Computador</div>
                         <div class="client-orders">7 OS</div>
                     </div>
-
                 </div>
             </div>
         </section>
 
         <!-- EQUIPAMENTOS -->
         <section id="equipamentos" class="section">
-
             <div class="section-title">
                 <div>
                     <p class="label">PATRIMÔNIO</p>
@@ -336,9 +315,7 @@
             </div>
 
             <div class="equipment-grid">
-
                 <div class="equipment-card">
-                    <div class="equipment-icon">▣</div>
                     <span class="equipment-status">Em manutenção</span>
                     <h3>Notebook Dell</h3>
                     <p>Marca: Dell</p>
@@ -347,7 +324,6 @@
                 </div>
 
                 <div class="equipment-card">
-                    <div class="equipment-icon">▤</div>
                     <span class="equipment-status">Aguardando</span>
                     <h3>Impressora HP</h3>
                     <p>Marca: HP</p>
@@ -356,20 +332,17 @@
                 </div>
 
                 <div class="equipment-card">
-                    <div class="equipment-icon">▥</div>
                     <span class="equipment-status done">Concluído</span>
                     <h3>Computador</h3>
                     <p>Marca: Lenovo</p>
                     <p>Modelo: ThinkCentre</p>
                     <small>Cliente: Pedro Oliveira</small>
                 </div>
-
             </div>
         </section>
 
         <!-- CONFIGURAÇÕES -->
         <section id="configuracoes" class="section">
-
             <div class="section-title">
                 <div>
                     <p class="label">SISTEMA</p>
@@ -379,7 +352,7 @@
 
             <div class="content-card settings">
                 <h3>Configurações do sistema</h3>
-                <p>Área preparada para futuras configurações da plataforma.</p>
+                <p>Opções de preferências administrativas.</p>
 
                 <div class="setting">
                     <span>Notificações de novas OS</span>
@@ -391,7 +364,6 @@
                     <input type="checkbox" checked>
                 </div>
             </div>
-
         </section>
 
         <footer>
@@ -403,33 +375,27 @@
     <!-- MODAL NOVA OS -->
     <div class="modal" id="modal">
         <div class="modal-box">
-
             <button class="close" id="closeModal">×</button>
 
             <div class="modal-title">
-                <div class="modal-icon">+</div>
-                <div>
-                    <h2>Nova Ordem de Serviço</h2>
-                    <p>Cadastre um novo serviço no sistema.</p>
-                </div>
+                <h2>Nova Ordem de Serviço</h2>
             </div>
 
             <form id="orderForm">
-
                 <div class="form-grid">
                     <div class="form-group">
                         <label>Cliente</label>
-                        <input type="text" placeholder="Nome do cliente" required>
+                        <input type="text" id="clientInput" placeholder="Nome do cliente" required>
                     </div>
 
                     <div class="form-group">
                         <label>Equipamento</label>
-                        <input type="text" placeholder="Ex: Notebook Dell" required>
+                        <input type="text" id="equipmentInput" placeholder="Ex: Notebook Dell" required>
                     </div>
 
                     <div class="form-group">
                         <label>Técnico</label>
-                        <select>
+                        <select id="techSelect">
                             <option>Marcos Silva</option>
                             <option>Rafael Costa</option>
                             <option>Ana Souza</option>
@@ -438,23 +404,22 @@
 
                     <div class="form-group">
                         <label>Status</label>
-                        <select>
-                            <option>Aberta</option>
-                            <option>Em andamento</option>
-                            <option>Concluída</option>
+                        <select id="statusSelect">
+                            <option value="Aberta">Aberta</option>
+                            <option value="Em andamento">Em andamento</option>
+                            <option value="Concluída">Concluída</option>
                         </select>
                     </div>
                 </div>
 
                 <div class="form-group">
                     <label>Problema relatado</label>
-                    <textarea placeholder="Descreva o problema do equipamento..."></textarea>
+                    <textarea id="problemInput" placeholder="Descreva o problema do equipamento..."></textarea>
                 </div>
 
                 <button type="submit" class="primary-btn full">
-                    Criar Ordem de Serviço
+                    Salvar Ordem de Serviço
                 </button>
-
             </form>
         </div>
     </div>
