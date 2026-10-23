@@ -1,0 +1,47 @@
+TECHFLOW — VERSÃO SOMENTE HTML E CSS
+
+COMO ABRIR
+Extraia todas as pastas e abra tela-principal/index.html no navegador.
+Também pode usar o Live Server do Visual Studio Code.
+
+CÓDIGO
+Não há arquivos .js, tags script, eventos inline ou URLs javascript.
+Cada tela usa somente seu HTML e CSS e os arquivos de estilo compartilhados.
+As cores, as pastas e a organização visual foram preservadas.
+
+INTERAÇÕES QUE FUNCIONAM COM HTML E CSS
+- Links e navegação entre as telas.
+- Menu da página principal no celular.
+- Abas de apresentação com botões de opção e CSS.
+- Troca entre a área de acesso e o formulário de cadastro do cliente.
+- Seleção do perfil e navegação para o painel correspondente.
+- Categorias, serviços e modalidade de atendimento.
+- Exibição do endereço para atendimento em domicílio.
+- Resumo visual da categoria, do serviço e da modalidade escolhidos.
+- Filtros visuais por status no administrador.
+- Filtros visuais por status e profissional nos cartões do técnico.
+- Janelas de detalhes e consultas com popovers nativos.
+- Perguntas e respostas com details e summary.
+
+LIMITES DA VERSÃO ESTÁTICA
+Os formulários de acesso permitem navegar para as páginas, mas não autenticam
+pessoas nem criam contas. A validação básica dos campos é feita pelo navegador.
+O formulário de serviço não envia nem armazena pedidos. Seu botão abre uma
+orientação e preserva os dados digitados enquanto a página está aberta.
+Os campos de texto digitados não são copiados automaticamente para o resumo.
+Os dados, números e históricos dos painéis são estáticos, escritos no HTML.
+Os filtros apenas alteram quais cartões ou linhas aparecem, sem recalcular
+os indicadores.
+Cadastro, login real, busca de dados, envio, exclusão e atualização de OS
+precisam de um back-end. Os controles de gravação indisponíveis estão
+desativados ou informam que precisam da conexão ao sistema.
+A página de solicitação continua sem a área de pagamento.
+
+NAVEGADOR
+Use uma versão atual do Chrome, Edge, Firefox ou Safari para os popovers
+nativos e os seletores CSS usados nos filtros.
+
+TESTES
+As seis telas foram conferidas em 390 e 1366 pixels no Chromium com
+JavaScript desativado. Foram testadas a navegação, as abas, os filtros
+e as janelas nativas.
